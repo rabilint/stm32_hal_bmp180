@@ -133,7 +133,7 @@ Refer to the `example/` directory for complete usage examples:
 
 ## Authors
 
-*   **Mykyta Maiboroda** - Initial work
+*   **Mykyta Maiboroda | rabilint** - Initial work
 
 ## License
 
