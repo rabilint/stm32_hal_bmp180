@@ -118,7 +118,7 @@ void BMP180_Update(BMP180_t *dev)
         case BMP180_START_PRESSURE:
             /* Request pressure measurement */
             cmd = 0x34 + (dev->current_oss << 6);
-            if(HAL_I2C_Mem_Write(dev->hi2c, BMP180_ADDR, 0xF4, 1, &cmd, 1, 10) == HAL_OK)
+            if(HAL_I2C_Mem_Write_IT(dev->hi2c, BMP180_ADDR, 0xF4, 1, &cmd, 1) == HAL_OK)
             {
                 dev->start_tick = HAL_GetTick();
                 dev->state = BMP180_WAIT_PRESSURE_DELAY;
